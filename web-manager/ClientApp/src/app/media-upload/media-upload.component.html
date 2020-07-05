@@ -1,0 +1,78 @@
+<h1 id="tableLabel">Media Upload</h1>
+
+<p>Click "Add Queue" to select media file for upload.</p>
+
+<ngfFormData [files]="queuedFiles"
+             postName="file"
+             [(FormData)]="sendableFormData">
+</ngfFormData>
+
+<ngfUploadStatus [(percent)]="progress"
+                 [httpEvent]="httpEvent">
+</ngfUploadStatus>
+
+<div class="inline-block">
+  <div ngfSelect
+       multiple="1"
+       [accept]="accept"
+       [maxSize]="maxSize"
+       [(files)]="queuedFiles"
+       class="well my-drop-zone"
+       style="border-style:groove;padding:0.5em;text-align:center;width:150px;">
+    Add Queue
+  </div>
+</div>
+
+<div *ngIf="queuedFiles.length > 0">
+  <div class="progress">
+    <div class="progress-bar"
+         role="progressbar"
+         [ngStyle]="{ 'width': progress + '%' }">
+    </div>
+  </div>
+
+  <button type="button"
+          class="btn btn-success btn-s"
+          (click)="uploadFiles()"
+          [disabled]="!queuedFiles.length">
+    Upload all
+  </button>
+
+  <button type="button"
+          class="btn btn-warning btn-s"
+          (click)="cancel()"
+          [disabled]="!httpEmitter">
+    Cancel all
+  </button>
+  <button type="button"
+          class="btn btn-danger btn-s"
+          (click)="queuedFiles.length=0"
+          [disabled]="!queuedFiles.length">
+    Remove all
+  </button>
+</div>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="queuedFiles.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let file of queuedFiles; let i=index">
+      <td>{{ file.name }}</td>
+      <td>{{ file.type }}</td>
+      <td>{{ file.size/1024/1024 | number:'.2' }} MB</td>
+      <td>
+        <button type="button"
+                class="btn btn-danger btn-xs"
+                (click)="queuedFiles.splice(i,1)">
+          x
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

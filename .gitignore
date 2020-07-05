@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/media-manager/DesignTimeBuild/.dtbcache.v2
+/.vs/media-manager/v16/.suo
+/model-manager/bin/Debug/netstandard2.0
+/.vs/media-manager/config
+/model-manager/obj/Debug/netstandard2.0
+/model-manager/obj
+/web-manager/wwwroot/uploads
+/web-manager/media-manager.db

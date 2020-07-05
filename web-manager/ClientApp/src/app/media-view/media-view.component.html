@@ -1,0 +1,61 @@
+<h1 id="tableLabel">Media View</h1>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="!isFetching">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Created Date(UTC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let m of uploadedMedia; let i=index">
+      <tr (click)="m.isSelected = !m.isSelected">
+        <td>{{ m.name }}</td>
+        <td>{{ m.type }}</td>
+        <td>{{ m.createdTimeStamp | date:'medium' }}</td>
+      </tr>
+      <tr *ngIf="m.isSelected && m.type == 'video/mp4'">
+        <td colspan="3">
+          <vg-player>
+            <vg-overlay-play></vg-overlay-play>
+            <vg-buffering></vg-buffering>
+
+            <vg-scrub-bar>
+              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+              <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+            </vg-scrub-bar>
+
+            <vg-controls>
+              <vg-play-pause></vg-play-pause>
+              <vg-playback-button></vg-playback-button>
+
+              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+              <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+
+              <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+              <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+              <vg-mute></vg-mute>
+              <vg-volume></vg-volume>
+
+              <vg-fullscreen></vg-fullscreen>
+            </vg-controls>
+
+            <video [vgMedia]="media" #media id="{{m.id}}" preload="auto" crossorigin="anonymous">
+              <source src="{{m.url}}" type="video/mp4">
+            </video>
+          </vg-player>
+        </td>
+      </tr>
+
+      <tr *ngIf="m.isSelected && m.type == 'image/jpeg'">
+        <td colspan="3">
+          <img src="{{m.url}}" alt="{{m.name}}">
+        </td>
+      </tr>
+    </ng-container>
+
+  </tbody>
+</table>
