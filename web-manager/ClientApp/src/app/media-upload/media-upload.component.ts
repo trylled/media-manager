@@ -14,7 +14,7 @@ export class MediaUploadComponent {
   private _httpClient: HttpClient;
   private _notificationsService: NotificationsService
 
-  private accept: string = '.jpg,.mp4';
+  private accept: string = '.jpg,.mp4,.pdf';
   private fileControllerUrl: string;
   private httpEmitter: Subscription
   private httpEvent: HttpEvent<{}>

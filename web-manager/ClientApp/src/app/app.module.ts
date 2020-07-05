@@ -19,6 +19,8 @@ import { VgControlsModule } from "videogular2/compiled/controls";
 import { VgOverlayPlayModule } from "videogular2/compiled/overlay-play";
 import { VgBufferingModule } from "videogular2/compiled/buffering";
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { VgBufferingModule } from "videogular2/compiled/buffering";
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
