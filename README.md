@@ -29,6 +29,7 @@ After creating media-manager DB you can use [DB Browser for SQLite](https://sqli
 * [Bootstrap](https://www.npmjs.com/package/bootstrap)
 * [videogular2](https://www.npmjs.com/package/videogular2)
 * [angular-file](https://www.npmjs.com/package/angular-file)
+* [ng2-pdf-viewer](https://www.npmjs.com/package/ng2-pdf-viewer#render-text)
 
 ### List of NuGet Packages used:
 * Microsoft.EntityFrameworkCore.Sqlite
