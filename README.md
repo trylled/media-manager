@@ -56,6 +56,6 @@ After creating media-manager DB you can use [DB Browser for SQLite](https://sqli
 - [x] In addition to mp4 and jpg, support pdf files, including the ability to render and preview them
 - [x] Use a responsive layout that works and looks great on desktops and mobile devices
 - [x] Add player controls when previewing mp4 files.  Include controls that allow for:
-  - [ ] Skipping forward and back 10 seconds
+  - [x] Skipping forward and back 10 seconds
   - [x] Pause/Play
   - [x] Speed up/slow down playback
