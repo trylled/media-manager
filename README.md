@@ -5,6 +5,7 @@ This Project will enable you to Upload and View images(jpg) and videos(mp4).
 * .NET Core
 * EF Core (code first migration)
 * Angular 8
+* Bootstrap
 
 ## Getting started
 ### Setting up NPM packages.
