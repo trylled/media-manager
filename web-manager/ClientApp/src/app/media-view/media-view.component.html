@@ -1,5 +1,7 @@
 <h1 id="tableLabel">Media View</h1>
 
+<p>When playing video, you can skip 10 seconds forward and backward using ArrowLeft and ArrowRight keys.</p>
+
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="!isFetching">
   <thead>
     <tr>
@@ -10,14 +12,14 @@
   </thead>
   <tbody>
     <ng-container *ngFor="let m of uploadedMedia; let i=index">
-      <tr (click)="m.isSelected = !m.isSelected">
+      <tr (click)="fileClick(m.id, !m.isSelected)">
         <td>{{ m.name }}</td>
         <td>{{ m.type }}</td>
         <td>{{ m.createdTimeStamp | date:'medium' }}</td>
       </tr>
       <tr *ngIf="m.isSelected && m.type == 'video/mp4'">
         <td colspan="3">
-          <vg-player>
+          <vg-player (onPlayerReady)="videoAPI = $event">
             <vg-overlay-play></vg-overlay-play>
             <vg-buffering></vg-buffering>
 
