@@ -1,6 +1,8 @@
 # media-manager
 This Project will enable you to Upload and View images(jpg) and videos(mp4).
 
+## IDE: Visual Studio 2019
+
 ## Technology used:
 * .NET Core
 * EF Core (code first migration)
