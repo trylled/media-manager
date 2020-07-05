@@ -20,7 +20,11 @@ npm install
 ### Creating Database using [Sqlite](https://www.sqlite.org/index.html).
 * Open project solution.
 * Set `web_manager` as Startup Project.
-* Open `Package Manager Console` and set `model-manager` as Default Project.
+* Open `Package Manager Console` and set `model-manager` as Default Project and run database update. (See [EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=visual-studio) for more details.)
+```
+Update-Database
+```
+
 
 After creating media-manager DB you can use [DB Browser for SQLite](https://sqlitebrowser.org/) to view the Database.
 
