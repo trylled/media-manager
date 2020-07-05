@@ -1,5 +1,5 @@
 # media-manager
-This Project will enable you to Upload and View images(jpg) and videos(mp4).
+This Project will enable you to Upload and View images(jpg), videos(mp4) and PDF files.
 
 ## IDE: Visual Studio 2019
 
@@ -47,7 +47,7 @@ After creating media-manager DB you can use [DB Browser for SQLite](https://sqli
 - [ ] Add a login mechanism, and allow each user to have their own list of files
 - [ ] Add a way to associate a title, description and tags with a file and have those changes persist.  Allow for filtering the list of files with search terms that can match these new fields
 - [ ] Use S3 or some other cloud-based storage for the files
-- [ ] In addition to mp4 and jpg, support pdf files, including the ability to render and preview them
+- [x] In addition to mp4 and jpg, support pdf files, including the ability to render and preview them
 - [x] Use a responsive layout that works and looks great on desktops and mobile devices
 - [x] Add player controls when previewing mp4 files.  Include controls that allow for:
   - [ ] Skipping forward and back 10 seconds
