@@ -55,6 +55,15 @@
           <img src="{{m.url}}" alt="{{m.name}}">
         </td>
       </tr>
+
+      <tr *ngIf="m.isSelected && m.type == 'application/pdf'">
+        <td colspan="3">
+          <pdf-viewer [src]="m.url"
+                      [render-text]="true"
+                      style="display: block;">
+          </pdf-viewer>
+        </td>
+      </tr>
     </ng-container>
 
   </tbody>
