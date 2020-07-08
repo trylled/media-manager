@@ -28,6 +28,13 @@ Update-Database
 
 After creating media-manager DB you can use [DB Browser for SQLite](https://sqlitebrowser.org/) to view the Database.
 
+### Running test.
+* Open cmd.
+* Go to media-manager\web-manager\ClientApp directory and run test.
+```
+ng test
+```
+
 ### List of NPM Packages used:
 * [Angular](https://angular.io/)
 * [lodash](https://www.npmjs.com/package/lodash)
@@ -46,7 +53,7 @@ After creating media-manager DB you can use [DB Browser for SQLite](https://sqli
 - [x] Allow uploading and persisting .jpg and .mp4 files
 - [x] Show a UI where users can upload new files, and show the list of files uploaded so far
 - [x] Provide a way to "preview" the uploaded files.  For images, we want to see the image, and for mp4's, play the video
-- [ ] Write basic tests for your code, and document a way to run them
+- [x] Write basic tests for your code, and document a way to run them
 
 ### Nice to have:
 - [ ] Generate code coverage for your tests, and document how coverage stats can be generated
