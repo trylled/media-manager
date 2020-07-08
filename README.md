@@ -20,7 +20,10 @@ npm install
 ### Creating Database using [Sqlite](https://www.sqlite.org/index.html).
 * Open project solution.
 * Set `web_manager` as Startup Project.
+  * ![SetStartupProject](https://github.com/trylled/media-manager/blob/master/images/SetStartupProject.JPG)
 * Open `Package Manager Console` and set `model-manager` as Default Project and run database update. (See [EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/?tabs=visual-studio) for more details.)
+  * ![OpenPackageManagerConsole](https://github.com/trylled/media-manager/blob/master/images/OpenPackageManagerConsole.JPG)
+  * ![DefaultProjectAndUpdateDatabase](https://github.com/trylled/media-manager/blob/master/images/DefaultProjectAndUpdateDatabase.JPG)
 ```
 Update-Database
 ```
@@ -28,14 +31,14 @@ Update-Database
 
 After creating media-manager DB you can use [DB Browser for SQLite](https://sqlitebrowser.org/) to view the Database.
 
-### Running test.
+### Running test using [Jasmine](https://jasmine.github.io/).
 * Open cmd.
 * Go to media-manager\web-manager\ClientApp directory and run test.
 ```
 ng test
 ```
 
-### List of NPM Packages used:
+### List of NPM Packages used (Note - No need to do anything here. Project will automatically restore packages when project is build):
 * [Angular](https://angular.io/)
 * [lodash](https://www.npmjs.com/package/lodash)
 * [Bootstrap](https://www.npmjs.com/package/bootstrap)
