@@ -35,7 +35,7 @@ After creating media-manager DB you can use [DB Browser for SQLite](https://sqli
 ng test
 ```
 
-### List of NPM Packages used:
+### List of NPM Packages used (Note - No need to do anything here. Project will automatically restore packages when project is build):
 * [Angular](https://angular.io/)
 * [lodash](https://www.npmjs.com/package/lodash)
 * [Bootstrap](https://www.npmjs.com/package/bootstrap)
