@@ -43,7 +43,7 @@ ng test
 * [angular-file](https://www.npmjs.com/package/angular-file)
 * [ng2-pdf-viewer](https://www.npmjs.com/package/ng2-pdf-viewer)
 
-### List of NuGet Packages used:
+### List of NuGet Packages used (Note - No need to do anything here. Project will automatically restore packages when project is build):
 * Microsoft.EntityFrameworkCore.Sqlite
 * Microsoft.EntityFrameworkCore.Tools
 * Microsoft.AspNetCore.SpaServices.Extensions
