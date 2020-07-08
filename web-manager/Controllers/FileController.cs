@@ -24,6 +24,7 @@ namespace web_manager.Controllers
             _logger = logger;
             _hostingEnvironment = environment;
             _uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+            Directory.CreateDirectory(_uploads);
         }
 
         [HttpGet]
