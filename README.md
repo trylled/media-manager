@@ -31,7 +31,7 @@ Update-Database
 
 After creating media-manager DB you can use [DB Browser for SQLite](https://sqlitebrowser.org/) to view the Database.
 
-### Running test.
+### Running test using [Jasmine](https://jasmine.github.io/).
 * Open cmd.
 * Go to media-manager\web-manager\ClientApp directory and run test.
 ```
